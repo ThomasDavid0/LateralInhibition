@@ -44,10 +44,12 @@ if __name__ == '__main__':
     arr = np.array(image) 
     
     #display the original image
-    px.imshow(arr).show()
+    fig = px.imshow(arr)
+    fig.update_layout(coloraxis_showscale=False).show()
 
     #run lateral inhibition
     arr3  = latinhib(arr, 100)
 
     #display the new image
-    px.imshow(arr3).show()
+    fig = px.imshow(arr3)
+    fig.update_layout(coloraxis_showscale=False).show()
